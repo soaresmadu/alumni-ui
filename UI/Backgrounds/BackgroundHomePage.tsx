@@ -1,6 +1,6 @@
 "use client";
 
-import LiquidEther from "../../UI/ReactBits/LiquidEther";
+import LiquidEther from "../ReactBitsConfig/LiquidEther";
 
 export default function BackgroundHomePage() {
   return (

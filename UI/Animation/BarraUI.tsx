@@ -1,7 +1,7 @@
 "use client";
 
 import { LuSwords } from 'react-icons/lu';
-import LogoLoop from '../ReactBits/LogoLoop';
+import LogoLoop from '../ReactBitsConfig/LogoLoop';
 import { GiShieldBash, GiSwordsEmblem, GiSwordwoman } from 'react-icons/gi';
 
 export default function BarraUI() {
@@ -14,7 +14,7 @@ export default function BarraUI() {
     ];
 
     return (
-        <div style={{ height: '200px', position: 'relative', overflow: 'hidden', backgroundColor: '#050505' }}>
+        <div style={{ height: 'auto', position: 'relative', overflow: 'hidden', backgroundColor: '#050505' }}>
             <LogoLoop
                 logos={techLogos}
                 speed={90}
