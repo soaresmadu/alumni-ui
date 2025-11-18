@@ -1,4 +1,4 @@
-import BarraUI from "@/components/barra/barra-ui";
+import BarraUI from "@/UI/Animation/BarraUI";
 import HeaderMenuClientPage from "@/components/header/HeaderMenuClientPage";
 import HomeClientPage from "@/components/home/HomeClientPage";
 

@@ -1,9 +1,8 @@
 "use client";
 
 import { LuSwords } from 'react-icons/lu';
-import LogoLoop from './LogoLoop';
+import LogoLoop from '../ReactBits/LogoLoop';
 import { GiShieldBash, GiSwordsEmblem, GiSwordwoman } from 'react-icons/gi';
-import { div } from 'three/tsl';
 
 export default function BarraUI() {
 
