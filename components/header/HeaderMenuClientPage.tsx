@@ -18,7 +18,7 @@ export default function HeaderMenuClientPage() {
 
     return (
         <header className="w-full bg-black fixed top-0 left-0 z-50">
-            <div className="max-w-7xl mx-auto px-10 h-20 flex items-center justify-between">
+            <div className="w-full px-10 sm:px-[150px] h-20 flex items-center justify-between">
                 <div className="text-white text-xl">alumni</div>
 
                 {/* Desktop Menu */}
