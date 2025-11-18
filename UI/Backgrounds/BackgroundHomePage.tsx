@@ -5,7 +5,6 @@ import LiquidEther from "../../UI/ReactBits/LiquidEther";
 export default function BackgroundHomePage() {
   return (
       <div style={{ width: '100%', height: '100%', position: 'relative' }}>
-        {/* LiquidEther */}
         <LiquidEther
           colors={['#5227FF', '#FF9FFC', '#B19EEF']}
           mouseForce={20}
