@@ -4,7 +4,7 @@ import BackgroundHomePage from "@/UI/Backgrounds/BackgroundHomePage";
 
 export default function HomeClientPage() {
   return (
-    <div className="w-full h-screen bg-[#180013] flex items-center justify-center text-[#4D494A] text-[15px]">
+    <div className="w-full h-screen bg-[#040003] flex items-center justify-center text-[#4D494A] text-[15px]">
 
       <BackgroundHomePage />
 
