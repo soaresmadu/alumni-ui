@@ -14,7 +14,7 @@ export default function BarraUI() {
     ];
 
     return (
-        <div style={{ height: 'auto', position: 'relative', overflow: 'hidden', backgroundColor: '#050505' }}>
+        <div style={{ height: 'auto', position: 'relative', overflow: 'hidden', backgroundColor: '#040003' }}>
             <LogoLoop
                 logos={techLogos}
                 speed={90}
