@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { bodoniModa, dmSans } from "../fonts";
 
 export function LandingHeader() {
@@ -27,13 +28,11 @@ export function LandingHeader() {
           </ul>
         </nav>
 
-        <button
-          type="button"
-          disabled
+        <Link href="/login"
           className="col-start-2 row-start-1 justify-self-end rounded-full border border-neutral-900 bg-[#F9FFEA] px-3 py-2 text-xs font-bold uppercase sm:px-6 sm:text-sm lg:col-start-3"
         >
           Acessar a plataforma
-        </button>
+        </Link>
       </div>
     </header>
   );

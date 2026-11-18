@@ -1,0 +1,401 @@
+.page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  color: #131211;
+}
+
+.layout {
+  display: grid;
+  flex: 1;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.illustration {
+  position: relative;
+  overflow: hidden;
+  padding: 1rem clamp(1.25rem, 4.4vw, 5rem);
+  background-color: #fcfaf0;
+  background-image:
+    linear-gradient(#13121112 1px, transparent 1px),
+    linear-gradient(90deg, #13121112 1px, transparent 1px);
+  background-size: 1.125rem 1.125rem;
+}
+
+.brand {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(1.75rem, 2.7vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.intro,
+.label,
+.star,
+.pinkShape,
+.orangeShape,
+.yellowShape {
+  display: none;
+}
+
+.panel {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: clamp(1rem, 4vw, 4rem);
+  background: #8dba29;
+}
+
+.card {
+  width: min(100%, 29rem);
+  padding: clamp(1.25rem, 3.2vw, 3rem);
+  border: 1px solid #131211;
+  border-radius: 1rem;
+  background: #fcfaf0;
+  box-shadow: 0.32rem 0.32rem #131211;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.heading {
+  margin-block: 0.65rem 1rem;
+  font-size: clamp(2.125rem, 3.6vw, 3.5rem);
+  font-weight: 700;
+  line-height: 0.96;
+}
+
+.description {
+  margin-bottom: 1.25rem;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+}
+
+.field {
+  margin-top: 0.85rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #131211;
+  border-radius: 0.55rem;
+}
+
+.field:focus-within {
+  outline: 2px solid #200bdd;
+  outline-offset: 2px;
+}
+
+.field label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.field input {
+  width: 100%;
+  min-width: 0;
+  padding-block: 0.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+  outline: none;
+}
+
+.password,
+.options,
+.remember {
+  display: flex;
+  align-items: center;
+}
+
+.password {
+  gap: 0.5rem;
+}
+
+.password button {
+  display: grid;
+  flex: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  cursor: pointer;
+}
+
+.options {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  margin-block: 1rem;
+  font-size: 0.8125rem;
+}
+
+.remember {
+  gap: 0.5rem;
+  font-weight: 400;
+}
+
+.remember input {
+  width: 1rem;
+  height: 1rem;
+  accent-color: #5c8304;
+}
+
+.recover,
+.registration button {
+  font-weight: 700;
+}
+
+.submit {
+  width: 100%;
+  min-height: 2.875rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #131211;
+  border-radius: 0.85rem;
+  background: #f43867;
+  color: #fcfaf0;
+  box-shadow: 0.15rem 0.15rem #131211;
+  font-weight: 800;
+}
+
+.registration {
+  margin-top: 1.25rem;
+  text-align: center;
+  font-size: 0.8125rem;
+}
+
+.registration button {
+  color: #5c8304;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+@media (min-width: 56rem) {
+  .layout {
+    grid-template-columns: minmax(0, 55fr) minmax(0, 45fr);
+  }
+
+  .illustration {
+    min-height: 38rem;
+    padding-top: 1.5rem;
+  }
+
+  .intro {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 55%;
+    margin-top: clamp(3rem, 11vh, 8rem);
+  }
+
+  .intro p:first-child {
+    font-size: clamp(2.5rem, 4.3vw, 5rem);
+    font-weight: 700;
+    line-height: 0.94;
+    letter-spacing: -0.035em;
+  }
+
+  .intro p + p {
+    max-width: 15rem;
+    margin-top: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .label {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    border: 1px solid #131211;
+    padding: 0.55rem 0.75rem;
+    font-size: clamp(0.55rem, 0.85vw, 0.75rem);
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .blueLabel {
+    top: 1.25rem;
+    right: 8%;
+    border-radius: 2rem;
+    background: #b8e0e5;
+  }
+
+  .greenLabel {
+    top: 30%;
+    right: 7%;
+    width: 29%;
+    background: #e0ed40;
+    transform: rotate(2deg);
+  }
+
+  .star,
+  .pinkShape,
+  .orangeShape,
+  .yellowShape {
+    position: absolute;
+    display: block;
+  }
+
+  .star {
+    top: 50%;
+    right: 9%;
+    width: 8%;
+    aspect-ratio: 1;
+    color: #d700b5;
+  }
+
+  .star span {
+    inset: 0;
+    width: 100%;
+  }
+
+  .pinkShape {
+    bottom: -13%;
+    left: -10%;
+    width: 46%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #f46867;
+  }
+
+  .orangeShape {
+    right: 4%;
+    bottom: 8%;
+    width: 45%;
+    aspect-ratio: 1.65;
+    border: 1px solid #131211;
+    border-radius: 40% / 53%;
+    background: #ff6d1f;
+    transform: rotate(8deg);
+  }
+
+  .yellowShape {
+    bottom: 18%;
+    left: 43%;
+    width: 12%;
+    aspect-ratio: 1;
+    border: 1px solid #131211;
+    border-radius: 50%;
+    background: #ffd702;
+  }
+}
+
+@media (min-width: 56rem) and (max-height: 54rem) {
+  .illustration {
+    min-height: 0;
+  }
+
+  .intro {
+    margin-top: clamp(2.25rem, 8dvh, 5.5rem);
+  }
+
+  .intro p:first-child {
+    font-size: clamp(2.25rem, min(4vw, 8dvh), 4rem);
+  }
+
+  .orangeShape {
+    width: 40%;
+  }
+
+  .pinkShape {
+    width: 39%;
+  }
+
+  .yellowShape {
+    width: 10%;
+  }
+
+  .panel {
+    padding-block: clamp(1rem, 3dvh, 2rem);
+  }
+
+  .card {
+    width: min(100%, 26rem);
+    padding: clamp(1.25rem, 3.5dvh, 2rem);
+  }
+
+  .heading {
+    margin-block: 0.5rem 0.75rem;
+    font-size: clamp(2rem, min(3.25vw, 7dvh), 2.75rem);
+  }
+
+  .description {
+    margin-bottom: 0.875rem;
+  }
+
+  .field {
+    margin-top: 0.65rem;
+  }
+
+  .options,
+  .registration {
+    margin-top: 0.75rem;
+  }
+}
+
+@media (width < 56rem) {
+  .layout {
+    grid-template-rows: auto 1fr;
+  }
+
+  .illustration {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .panel {
+    padding-block: clamp(1.25rem, 5dvh, 3rem);
+  }
+}
+
+@media (40rem <= width < 56rem) {
+  .blueLabel {
+    display: block;
+    border: 1px solid #131211;
+    border-radius: 2rem;
+    padding: 0.5rem 0.75rem;
+    background: #b8e0e5;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+@media (width < 40rem) {
+  .illustration {
+    padding: 0.75rem 1rem;
+  }
+
+  .panel {
+    align-items: start;
+    padding: clamp(0.875rem, 3dvh, 1.5rem) clamp(0.75rem, 4vw, 1.25rem) 1.5rem;
+  }
+
+  .card {
+    padding: clamp(1rem, 4.5vw, 1.5rem);
+  }
+
+  .heading {
+    margin-block: 0.5rem 0.75rem;
+    font-size: clamp(1.875rem, 8vw, 2.5rem);
+  }
+
+  .description {
+    margin-bottom: 0.875rem;
+  }
+
+  .field {
+    margin-top: 0.65rem;
+  }
+
+  .options {
+    margin-block: 0.75rem;
+  }
+
+  .registration {
+    margin-top: 0.875rem;
+  }
+}

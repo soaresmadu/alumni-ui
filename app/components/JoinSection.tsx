@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { blinker, dmSans } from "../fonts";
 import anchorStyles from "../styles/LandingAnchor.module.css";
 
@@ -33,13 +34,9 @@ export function JoinSection() {
             voltar, você vai saber de onde retomar e o que vale fazer a seguir.
           </p>
 
-          <button
-            type="button"
-            disabled
-            className="mt-7 w-full rounded-2xl border-2 border-[#200BDD] px-4 py-2.5 text-center text-xs font-bold text-[#200BDD] uppercase disabled:cursor-not-allowed"
-          >
-            Clique aqui para acessar a plataforma e fazer seu cadastro
-          </button>
+          <Link href="/login" className="mt-7 block w-full rounded-2xl border-2 border-[#200BDD] px-4 py-2.5 text-center text-xs font-bold text-[#200BDD] uppercase">
+            Clique aqui para acessar a plataforma da alumni
+          </Link>
         </div>
       </div>
     </section>
