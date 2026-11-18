@@ -1,0 +1,304 @@
+.hero {
+  overflow: clip;
+  color: #131313;
+}
+
+.frame {
+  position: relative;
+  max-width: 90rem;
+  margin-inline: auto;
+}
+
+.copy {
+  position: relative;
+  z-index: 1;
+  padding: clamp(2.5rem, 7.5vw, 7rem) clamp(1rem, 6.4vw, 6rem) 0;
+}
+
+.title {
+  font-size: clamp(2rem, 4.4vw, 4.25rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+}
+
+.title span {
+  display: block;
+}
+
+.description {
+  max-width: 30rem;
+  margin-top: 1rem;
+  font-size: clamp(0.9375rem, 1.4vw, 1.125rem);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.artwork {
+  position: relative;
+  height: clamp(13rem, 53vw, 26rem);
+}
+
+.orangeCircle,
+.pinkCircle {
+  position: absolute;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.orangeCircle {
+  top: 0;
+  left: 82%;
+  width: 42%;
+  background: #ff6d1f;
+}
+
+.pinkCircle {
+  top: 54%;
+  left: 23%;
+  width: 54%;
+  background: #f43867;
+}
+
+.label {
+  position: absolute;
+  border: 1px solid currentColor;
+  padding: 0.5rem;
+  font-size: clamp(0.5rem, 0.75vw, 0.6875rem);
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.lilacLabel {
+  width: max(10rem, 24%);
+  border-radius: 1rem;
+  background: #eca1ff;
+}
+
+.firstLilac {
+  top: 15%;
+  right: -1rem;
+}
+
+.secondLilac {
+  top: 34%;
+  right: 0.5rem;
+}
+
+.yellowLabel {
+  width: max(8.5rem, 26.5%);
+  background: #ffe24a;
+}
+
+.firstYellow {
+  top: 56%;
+  left: 12%;
+}
+
+.secondYellow {
+  top: 77%;
+  left: 49%;
+}
+
+.star {
+  position: absolute;
+  aspect-ratio: 1;
+  width: 5.5%;
+  transform-style: preserve-3d;
+}
+
+.star::before,
+.star::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: currentColor;
+  clip-path: polygon(50% 0%, 56% 37%, 85% 15%, 63% 44%, 100% 50%, 63% 56%, 85% 85%, 56% 63%, 50% 100%, 44% 63%, 15% 85%, 37% 56%, 0% 50%, 37% 44%, 15% 15%, 44% 37%);
+}
+
+.star::after {
+  transform: rotateY(90deg);
+  filter: brightness(0.8);
+}
+
+.goldStar {
+  top: 15%;
+  left: 63%;
+  color: #a39505;
+}
+
+.pinkStar {
+  top: 43%;
+  left: 8%;
+  color: #d700b5;
+}
+
+.blueStar {
+  top: 63%;
+  right: 6%;
+  color: #006c9b;
+}
+
+@media (min-width: 56rem) {
+  .frame {
+    min-height: clamp(32rem, 53.5vw, 48rem);
+  }
+
+  .copy {
+    width: min(61%, 53rem);
+  }
+
+  .artwork {
+    position: absolute;
+    inset: 0;
+    height: auto;
+  }
+
+  .pinkCircle {
+    left: 30%;
+    width: 42%;
+  }
+
+  .label {
+    min-height: 9%;
+    padding: 0.55rem 0.65rem;
+  }
+
+  .firstLilac {
+    top: 32%;
+  }
+
+  .secondLilac {
+    top: 45%;
+    right: -0.5rem;
+  }
+
+  .firstYellow {
+    top: 67%;
+    left: 25.5%;
+  }
+
+  .secondYellow {
+    top: 83%;
+    left: 48%;
+  }
+
+  .goldStar {
+    top: 25%;
+    left: 65.5%;
+  }
+
+  .pinkStar {
+    top: 64%;
+    left: 6%;
+    width: 6.8%;
+  }
+
+  .blueStar {
+    top: 77%;
+    right: 12%;
+  }
+}
+
+@media (min-width: 56rem) and (max-height: 54rem) {
+  .frame {
+    min-height: clamp(29rem, calc(100svh - 8rem), 39rem);
+  }
+
+  .copy {
+    padding-top: clamp(2.75rem, 8svh, 4.75rem);
+  }
+
+  .title {
+    font-size: clamp(2.25rem, 3.75vw, 3.5rem);
+  }
+
+  .description {
+    margin-top: 0.75rem;
+    font-size: clamp(0.9375rem, 1.25vw, 1rem);
+  }
+
+  .orangeCircle,
+  .pinkCircle {
+    width: 35%;
+  }
+
+  .pinkCircle {
+    left: 33.5%;
+  }
+
+  .lilacLabel {
+    width: 21%;
+  }
+
+  .yellowLabel {
+    width: 23%;
+  }
+
+  .label {
+    min-height: 8%;
+    font-size: clamp(0.5rem, 0.67vw, 0.625rem);
+  }
+
+  .star {
+    width: 4.5%;
+  }
+
+  .pinkStar {
+    width: 5.5%;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .star {
+    animation: hero-star-spin 8s linear infinite;
+  }
+
+  .pinkStar {
+    animation-delay: -2s;
+  }
+
+  .blueStar {
+    animation-delay: -4s;
+  }
+}
+
+@keyframes hero-star-spin {
+  from {
+    transform: perspective(25rem) rotateY(0deg);
+  }
+
+  to {
+    transform: perspective(25rem) rotateY(360deg);
+  }
+}
+
+@media (max-width: 55.999rem) {
+  .copy {
+    padding-top: clamp(2rem, 6vw, 3.5rem);
+  }
+
+  .artwork {
+    margin-top: 1rem;
+  }
+
+  .firstLilac {
+    right: 0.75rem;
+  }
+
+  .secondLilac {
+    right: 1.75rem;
+  }
+}
+
+@media (max-width: 25rem) {
+  .title {
+    font-size: clamp(1.75rem, 8vw, 2rem);
+  }
+
+  .secondYellow {
+    left: auto;
+    right: 1rem;
+  }
+}

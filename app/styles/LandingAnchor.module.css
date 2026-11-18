@@ -1,0 +1,26 @@
+.target {
+  --landing-anchor-offset: 10rem;
+}
+
+.target,
+.target:global(#sobre) {
+  scroll-margin-top: var(--landing-anchor-offset);
+}
+
+@media (min-width: 24rem) {
+  .target {
+    --landing-anchor-offset: 7rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .target {
+    --landing-anchor-offset: 5.5rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .target {
+    --landing-anchor-offset: 4rem;
+  }
+}
