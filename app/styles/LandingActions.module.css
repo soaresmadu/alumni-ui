@@ -1,0 +1,13 @@
+.access:is(:hover, :focus-visible) {
+  background-color: #200bdd;
+  color: #fcfaf0;
+}
+
+.menuLink:is(:hover, :focus-visible) {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.headerAccess:is(:hover, :focus-visible) {
+  background-color: #b7d456;
+}

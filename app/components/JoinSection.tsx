@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styles from "../styles/LandingActions.module.css";
 import { blinker, dmSans } from "../fonts";
 import anchorStyles from "../styles/LandingAnchor.module.css";
 
@@ -34,7 +35,7 @@ export function JoinSection() {
             voltar, você vai saber de onde retomar e o que vale fazer a seguir.
           </p>
 
-          <Link href="/login" className="mt-7 block w-full rounded-2xl border-2 border-[#200BDD] px-4 py-2.5 text-center text-xs font-bold text-[#200BDD] uppercase">
+          <Link href="/login" className={`${styles.access} mt-7 block w-full rounded-2xl border-2 border-[#200BDD] px-4 py-2.5 text-center text-xs font-bold text-[#200BDD] uppercase`}>
             Clique aqui para acessar a plataforma da alumni
           </Link>
         </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styles from "../styles/LandingActions.module.css";
 import { bodoniModa, dmSans } from "../fonts";
 
 export function LandingHeader() {
@@ -20,16 +21,16 @@ export function LandingHeader() {
           className="col-span-2 col-start-1 row-start-2 justify-self-center lg:col-span-1 lg:col-start-2 lg:row-start-1"
         >
           <ul className="flex flex-wrap items-center justify-center gap-x-3 text-center text-xs lg:gap-x-1 font-bold uppercase sm:text-sm">
-            <li><a className="inline-flex min-h-9 items-center lg:min-h-0" href="#inicio">Home</a></li>
+            <li><a className={`${styles.menuLink} inline-flex min-h-9 items-center lg:min-h-0`} href="#inicio">Home</a></li>
             <li aria-hidden="true" className="hidden lg:list-item">•</li>
-            <li><a className="inline-flex min-h-9 items-center lg:min-h-0" href="#sobre">sobre a Alumni</a></li>
+            <li><a className={`${styles.menuLink} inline-flex min-h-9 items-center lg:min-h-0`} href="#sobre">sobre a Alumni</a></li>
             <li aria-hidden="true" className="hidden lg:list-item">•</li>
-            <li><a className="inline-flex min-h-9 items-center lg:min-h-0" href="#plataforma">Conheça a plataforma</a></li>
+            <li><a className={`${styles.menuLink} inline-flex min-h-9 items-center lg:min-h-0`} href="#plataforma">Conheça a plataforma</a></li>
           </ul>
         </nav>
 
         <Link href="/login"
-          className="col-start-2 row-start-1 justify-self-end rounded-full border border-neutral-900 bg-[#F9FFEA] px-3 py-2 text-xs font-bold uppercase sm:px-6 sm:text-sm lg:col-start-3"
+          className={`${styles.headerAccess} col-start-2 row-start-1 justify-self-end rounded-full border border-neutral-900 bg-[#F9FFEA] px-3 py-2 text-xs font-bold uppercase sm:px-6 sm:text-sm lg:col-start-3`}
         >
           Acessar a plataforma
         </Link>

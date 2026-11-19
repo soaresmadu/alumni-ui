@@ -1,0 +1,72 @@
+.page {
+  --auth-panel-background: #f43867;
+  --auth-submit-background: #8dba29;
+  --auth-submit-hover: #779f21;
+  --auth-link-color: #d02654;
+}
+
+.submit {
+  margin-top: clamp(0.75rem, 1.5vw, 1.75rem);
+}
+
+@media (min-width: 56rem) {
+  .layout.layout {
+    grid-template-columns: minmax(0, 45fr) minmax(0, 55fr);
+  }
+
+  .panel {
+    grid-area: 1 / 1;
+  }
+
+  .illustration {
+    grid-area: 1 / 2;
+    text-align: right;
+  }
+
+  .intro {
+    margin-left: auto;
+  }
+
+  .intro p {
+    margin-left: auto;
+  }
+
+  .illustration .blueLabel {
+    right: auto;
+    left: 8%;
+  }
+
+  .illustration .lilacLabel {
+    right: auto;
+    left: 8%;
+    background: #eca1ff;
+    transform: rotate(-2deg);
+    text-align: left;
+  }
+
+  .illustration .star {
+    right: auto;
+    left: 9%;
+    width: 7%;
+    color: #200bdd;
+  }
+
+  .illustration .greenShape {
+    right: -13%;
+    left: auto;
+    background: #8dba29;
+  }
+
+  .illustration .yellowShape {
+    right: auto;
+    left: 4%;
+    background: #ffe51f;
+    transform: rotate(-8deg);
+  }
+
+  .illustration .orangeShape {
+    right: 43%;
+    left: auto;
+    background: #ff6d1f;
+  }
+}
